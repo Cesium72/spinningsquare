@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                font-family:sans-serif;
+                background-color:black;
+                margin:0px;
+                overflow:hidden;
+            }
+            #home {
+                color:yellow;
+                text-align:center;
+            }
+            button {
+                border:1px solid yellow;
+                border-radius:2px;
+                background-color:black;
+                color:yellow;
+                cursor:pointer;
+            }
+            #board {
+                color:yellow;
+                display:none;
+                padding:0px;
+            }
+            #char {
+                background-color:yellow;
+                color:black;
+                width:10vh;
+                height:10vh;
+                padding:2px;
+                font-size:3.5rem;
+                text-align:center;
+                transform-origin:center;
+                rotate:90deg;
+                margin:0px;
+                top:80vh;
+                left:50vw;
+                position:absolute;
+                z-index:1;
+            }
+            #ground {
+                border-color:yellow;
+                width:100vw;
+                top:89vh;
+                position:absolute;
+                z-index:0;
+            }
+            #rock {
+                border-radius:5vh;
+                border:none;
+                background-color:yellow;
+                height:10vh;
+                width:35vw;
+                position:absolute;
+                left:50vw;
+                top:-20vh;
+                z-index:2;
+            }
+            #score {
+                color:yellow;
+                text-align:center;
+                width:100%;
+                position:absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="home">
+        <h1>Spinning Square</h1>
+        <button onclick="play()">PLAY</button><br/><br/>
+        <button onclick="shop()">SHOP</button>
+        </div>
+        <div id="board">
+            <p id="score"></p>
+            <div id="char">: )</div>
+            <div id="rock"></div>
+            <hr id="ground"/>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
