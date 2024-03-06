@@ -1,5 +1,5 @@
 # SpinningSquare
-## Based on the Scratch game
+## Based on the Scratch game by @Apple123600
 - Use the arrow keys to move
 - Watch for falling rocks!
-- Shop is still a work in progress...
+- Shop will soon have more skins...
