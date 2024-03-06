@@ -8,21 +8,38 @@
                 margin:0px;
                 overflow:hidden;
             }
-            #home {
+            body > * {
                 color:yellow;
                 text-align:center;
+                height:100vh;
+                overflow-y:auto;
+                overflow-x:hidden;
+            }
+            h1 {
+                font-size:6rem;
             }
             button {
                 border:1px solid yellow;
-                border-radius:2px;
-                background-color:black;
-                color:yellow;
+                border-radius:5vh;
+                background-color:yellow;
+                height:10vh;
+                width:50vw;
+                font-size:3rem;
+                color:black;
                 cursor:pointer;
+                transition:all 0.5s linear;
+            }
+            button:hover {
+                scale:1.1;
+                rotate:10deg;
+                color:yellow;
+                background-color:black;
             }
             #board {
                 color:yellow;
                 display:none;
                 padding:0px;
+                overflow:hidden;
             }
             #char {
                 background-color:yellow;
@@ -41,8 +58,6 @@
                 z-index:1;
             }
             #ground {
-                border-color:yellow;
-                width:100vw;
                 top:89vh;
                 position:absolute;
                 z-index:0;
@@ -58,11 +73,35 @@
                 top:-20vh;
                 z-index:2;
             }
+            hr {
+                border-color:yellow;
+                width:100vw;
+            }
             #score {
                 color:yellow;
                 text-align:center;
                 width:100%;
                 position:absolute;
+            }
+            .item {
+                width:98%;
+                margin:1vw;
+                border:1px solid yellow;
+                border-radius:2px;
+                padding:4px;
+            }
+            .char {
+                background-color:yellow;
+                width:10vh;
+                height:10vh;
+                transform-origin:center;
+                rotate:90deg;
+                padding:2px;
+                font-size:3.5rem;
+                text-align:center;
+                color:black;
+                float:center;
+                margin:auto;
             }
         </style>
     </head>
@@ -77,6 +116,18 @@
             <div id="char">: )</div>
             <div id="rock"></div>
             <hr id="ground"/>
+        </div>
+        <div id="gameover"style="display:none;">
+            <h1>GAME OVER!</h1>
+            <hr/>
+            <p id="result"></p>
+            <button onclick="home()">RETURN HOME</button>
+        </div>
+        <div style="display:none;"id="shop">
+            <h1>SHOP</h1>
+            <h2 id="coins"></h2>
+            <button onclick="home()">RETURN HOME</button>
+            <hr/>
         </div>
         <script src="./script.js"></script>
     </body>
